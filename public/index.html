@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="./json_data.js?update=2019-06-10a"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+<h1>Where To Play Badminton in Victoria, BC Canada</h1>
+
+<!-- component template -->
+<script type="text/x-template" id="grid-template">
+    <table>
+      <thead>
+        <tr>
+          <th v-for="key in columns"
+            @click="sortBy(key)"
+            :class="{ active: sortKey == key }">
+            {{ key | capitalize }}
+            <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="entry in filtered_json_list">
+          <td v-for="key in columns">
+            {{entry[key]}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </script>
+  
+  <!-- demo root element -->
+  <div id="app">
+<!---
+    <h2>    Width: {{ window.width }},  Height: {{ window.height }} </h2>
+    {{ gridColumns }}
+    <hr>
+ -->
+    <form id="search">
+     Filter List <input id="query" name="query" v-model="searchQuery">
+    </form>
+    <br>
+    Data Last Updated On <strong>{{ lastUpdate }}</strong>
+    <table-grid
+      :json_list="gridData"
+      :columns="gridColumns"
+      :filter-key="searchQuery">
+    </table-grid>
+  </div>
+        <script src="index.js"></script>
+    </body>
+</html>
