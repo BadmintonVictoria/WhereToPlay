@@ -1,0 +1,68 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    padding: .1em;
+   }
+ #container {
+   width: 100%;
+   no-border-style: solid;
+   no-border-width: 1px;
+   no-border-color: rgba(0,0,0, 0.25);
+   no-background-color: rgba(0,0,0,.05);
+   padding: .5em;
+   padding-bottom: 2em;
+ }
+
+.table-div {
+    display: flex;
+}
+.col-Day { flex: 1; }
+.col-Group { flex: 3; }
+.col-Area { flex: 1; }
+.col-Location { flex: 2; }
+.col-Level { flex: 1; }
+.col-Shuttle { flex: 1; }
+.col-Time { flex: 2; }
+.col-Season { flex: 1; }
+
+.td-header {
+    font-size: 1.5em;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightblue;
+    border-color: lightskyblue;
+    padding: .1em;
+}
+.td-content {
+    border-style: solid;
+    border-width: 1px; 
+    border-color: #ccc;
+    padding: .1em;
+}
+
+.tr-content:nth-child(even) {
+    background-color: rgb(238, 235, 235);
+}
+.tr-content:nth-child(odd) {
+    background-color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+      background-color: rgb(201, 224, 231);
+    }
+    .table-div {
+        flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(201, 224, 231);
+    }
+    .table-div {
+        flex-direction: column;
+    }
+    #container {
+        font-size: 0.9em;
+        width: 95%;
+    }
+  }
