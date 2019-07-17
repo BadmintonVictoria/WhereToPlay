@@ -1,0 +1,134 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    padding: .1em;
+   }
+ #container {
+   width: 100%;
+   no-border-style: solid;
+   no-border-width: 1px;
+   no-border-color: rgba(0,0,0, 0.25);
+   no-background-color: rgba(0,0,0,.05);
+   padding: .5em;
+   padding-bottom: 2em;
+ }
+
+.table-div {
+    display: flex;
+}
+label {
+  display: none;
+}
+.col-Day { flex: 1; flex-basis: 60px; }
+.col-Group { flex: 3; flex-basis: 100px; }
+.col-Area { flex: 1; flex-basis: 60px; }
+.col-Location { flex: 2; flex-basis: 60px; }
+.col-Level { flex: 1; flex-basis: 60px; }
+.col-Shuttle { flex: 1; flex-basis: 60px; }
+.col-Time { flex: 2; flex-basis: 60px; }
+.col-Season { flex: 1; flex-basis: 60px; }
+
+.td-header {
+    font-size: 1.5em;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightblue;
+    border-color: lightskyblue;
+    padding: .1em;
+}
+.td-content {
+    border-style: solid;
+    border-width: 1px; 
+    border-color: #ccc;
+    padding: .1em;
+}
+
+.tr-content:nth-child(even) {
+    background-color: rgb(238, 235, 235);
+}
+.tr-content:nth-child(odd) {
+    background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+      background-color: rgb(201, 224, 231);
+      padding: 0;
+    }
+    label {
+      display: inline-block;
+      width: 80px;
+      background-color: rgba(0, 0, 0, 0.25);
+      color: white;
+      margin-right: 5px;
+      font-size: .9em;
+    }
+    #container { padding: 0; }
+    .table-div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col-Day { flex: 1 1 100%; }
+    .col-Group { flex: 1 1 100%; font-size: 1.4em; }
+    .col-Area { flex: 1 1 50%; }
+    .col-Location { flex: 1 1 50%; }
+    .col-Level { flex: 1 1 50%; }
+    .col-Shuttle { flex: 1 1 50%; }
+    .col-Time { flex: 1 1 50%; }
+    .col-Season { flex: 1 1 50%; }
+
+    #Title {
+      text-align: center;
+      padding: 1em;
+    }
+    .tr-header { display: none; }
+    .NotHeader { display: none; }
+    .Header { 
+      text-align: center;
+      font-size: 1.6em;
+      width: 100%;
+      background-color: rgb(201, 224, 231);
+      border-width: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    body {
+      background-color: rgb(201, 224, 231);
+      padding: 0;
+    }
+    label {
+      display: inline-block;
+      width: 80px;
+      background-color: rgba(0, 0, 0, 0.25);
+      color: white;
+      margin-right: 5px;
+      font-size: .9em;
+    }
+    #container { padding: 0; }
+    .table-div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col-Day { flex: 1 1 100%; }
+    .col-Group { flex: 1 1 100%; }
+    .col-Area { display: none; }
+    .col-Location { flex: 1 1 100%; }
+    .col-Level { flex: 1 1 50%; }
+    .col-Shuttle { flex: 1 1 50%; }
+    .col-Time { flex: 1 1 100%; padding-bottom: 10px; }
+    .col-Season { display: none; }
+
+    #Title {
+      text-align: center;
+      padding: 1em;
+    }
+    .tr-header { display: none; }
+    .NotHeader { display: none; }
+    .Header { 
+      text-align: center;
+      font-size: 1.6em;
+      width: 100%;
+      background-color: rgb(201, 224, 231);
+      border-width: 0px;
+    }
+  }

@@ -15,14 +15,14 @@ body {
 .table-div {
     display: flex;
 }
-.col-Day { flex: 1; }
-.col-Group { flex: 3; }
-.col-Area { flex: 1; }
-.col-Location { flex: 2; }
-.col-Level { flex: 1; }
-.col-Shuttle { flex: 1; }
-.col-Time { flex: 2; }
-.col-Season { flex: 1; }
+.col-Day { flex: 1; flex-basis: 60px; }
+.col-Group { flex: 3; flex-basis: 100px; }
+.col-Area { flex: 1; flex-basis: 60px; }
+.col-Location { flex: 2; flex-basis: 60px; }
+.col-Level { flex: 1; flex-basis: 60px; }
+.col-Shuttle { flex: 1; flex-basis: 60px; }
+.col-Time { flex: 2; flex-basis: 60px; }
+.col-Season { flex: 1; flex-basis: 60px; }
 
 .td-header {
     font-size: 1.5em;
@@ -46,23 +46,38 @@ body {
     background-color: white;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 760px) {
     body {
       background-color: rgb(201, 224, 231);
     }
     .table-div {
-        flex-direction: column;
+      flex-wrap: wrap;
     }
-  }
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: rgb(201, 224, 231);
-    }
-    .table-div {
-        flex-direction: column;
+    .tr-header {
+      display: none;
     }
     #container {
         font-size: 0.9em;
-        width: 95%;
     }
+    .td-content {
+      border-width: 0px;
+      border-left: 1px;
+      border-right: 1px;
+      margin-bottom: 10px;
+      padding: .5em;
+    }
+    .col-Season {
+      display: none;
+    }
+    .NotHeader {
+      display: none;
+    }
+    .Header { 
+      flex: none;
+      text-align: center;
+      font-size: 2em;
+      width: 100%;
+      background-color: rgb(201, 224, 231);
+    }
+
   }
