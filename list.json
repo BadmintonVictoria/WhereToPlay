@@ -1,4 +1,6 @@
 [
 {"DayOfWeek":"Monday", "GroupDescription":"Drop In Ladies Doubles", "GeneralArea":"Cordova Bay", "Location":"Brentwood Bay Hall", "PlayerLevel":"Intermediate", "PlayerAge":"Adult", "Shuttle":"Feather", "TimeRange":"8:00 pm - 10:00 pm", "Season":"Unknown"},
-{"DayOfWeek":"Monday", "GroupDescription":"Drop-in Competitive Ladder", "GeneralArea":"Cordova Bay", "Location":"Brentwood Bay Hall", "PlayerLevel":"Advanced", "PlayerAge":"Adult", "Shuttle":"Feather", "TimeRange":"8:00 pm - 10:30 pm", "Season":"Unknown"}
+{"DayOfWeek":"Monday", "GroupDescription":"Drop-in Competitive Ladder", "GeneralArea":"Cordova Bay", "Location":"Brentwood Bay Hall", "PlayerLevel":"Advanced", "PlayerAge":"Adult", "Shuttle":"Feather", "TimeRange":"8:00 pm - 10:30 pm", "Season":"Unknown"},
+{"DayOfWeek":"Tuesday", "GroupDescription":"Cedar Hill Drop-In (16+)", "GeneralArea":"Saanich (Shelbourne)", "Location":"Cedar Hill Rec", "PlayerLevel":"All Levels", "PlayerAge":"16+", "Shuttle":"Nylon", "TimeRange":"6:30 pm - 8:15 pm", "Season":"Annual"},
+{"DayOfWeek":"Tuesday", "GroupDescription":"Henderson Drop-In (15+) Social", "GeneralArea":"Oak Bay", "Location":"Uvic Area", "PlayerLevel":"All Levels", "PlayerAge":"13+", "Shuttle":"Nylon", "TimeRange":"7:00 pm - 8:30 pm", "Season":"Annual"}
 ]
