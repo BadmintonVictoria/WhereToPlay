@@ -1,0 +1,3 @@
+Saanich Areas:
+- HTML URL is https://www.saanich.ca/EN/main/community/community-planning/local-area-plans.html
+- Image URL is https://www.saanich.ca/assets/Local~Government/Images/Planning/Saanich-Local-Areas-Large-Map.png
