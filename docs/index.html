@@ -1,56 +1,105 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <script src="./json_data.js?update=2019-06-10a"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    </head>
-    <body>
-<h1>Where To Play Badminton in Victoria, BC Canada</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="last-modified" content="2019-08-21">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Badminton Victoria - Where To Play Guide</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="flex_table.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+/* unvisited link */
+a:link, a:visited {
+  color: blue;
+}
+
+</style>
+
+<script src="./json_data.js?update=2019-08-21"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<img src="badminton-icon.gif" id="logo"/>
 
 <!-- component template -->
+<script type="text/x-template" id="grid-header">
+<span>
+        <div class="table-div tr-header" >
+                <div class="td-header col-Day" >Day</div>
+                <div class="td-header col-Group" >Group</div>
+                <div class="td-header col-Area" >Area</div>
+                <div class="td-header col-Location" >Location</div>
+                <div class="td-header col-Level" >Level</div>
+                <div class="td-header col-Age" >Age</div>
+                <div class="td-header col-Shuttle" >Shuttle</div>
+                <div class="td-header col-Reservation" >Reservation</div>
+                <div class="td-header col-Season" >Season</div>
+                <div class="td-header col-Time" >Time</div>
+
+        </div>
+</span>
+</script>
+
 <script type="text/x-template" id="grid-template">
-    <table>
-      <thead>
-        <tr>
-          <th v-for="key in columns"
-            @click="sortBy(key)"
-            :class="{ active: sortKey == key }">
-            {{ key | capitalize }}
-            <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
-            </span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="entry in filtered_json_list">
-          <td v-for="key in columns">
-            {{entry[key]}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </script>
-  
-  <!-- demo root element -->
-  <div id="app">
-<!---
-    <h2>    Width: {{ window.width }},  Height: {{ window.height }} </h2>
-    {{ gridColumns }}
-    <hr>
- -->
-    <form id="search">
-     Filter List <input id="query" name="query" v-model="searchQuery">
-    </form>
-    <br>
-    Data Last Updated On <strong>{{ lastUpdate }}</strong>
-    <table-grid
-      :json_list="gridData"
-      :columns="gridColumns"
-      :filter-key="searchQuery">
-    </table-grid>
-  </div>
-        <script src="index.js"></script>
-    </body>
+<span>
+        <div class="table-div tr-content" v-for="json in json_list">
+                <div class="td-content col-Day Header">
+                <table><tr><td>{{json.DayOfWeek}}</td></tr></table>
+                </div>
+                <div class="td-content col-Group">
+        <table><tr><td class="label">Group:</td><td><a v-bind:href="json.Web_URL">{{json.GroupDescription}}</a></td></tr></table>
+                </div>
+                <div class="td-content col-Area">
+        <table><tr><td class="label">Area:</td><td>{{json.GeneralArea}}</td></tr></table>            
+                </div>
+                <div class="td-content col-Location">
+        <table><tr><td class="label">Location:</td><td><a v-bind:href="json.Map_URL">{{json.Location}}</a></td></tr></table>              
+                </div>
+                <div class="td-content col-Level">
+        <table><tr><td class="label">Level:</td><td>{{json.PlayerLevel}}</td></tr></table>            
+                </div>
+                <div class="td-content col-Age">
+        <table><tr><td class="label">Age:</td><td>{{json.PlayerAge}}</td></tr></table>            
+                </div>
+                <div class="td-content col-Shuttle">
+        <table><tr><td class="label">Shuttle:</td><td>{{json.Shuttle}}</td></tr></table>            
+                </div>
+                <div class="td-content col-Reservation">
+        <table><tr><td class="label">Reservation:</td><td>{{json.Reservation}}</td></tr></table>            
+                </div>
+                <div class="td-content col-Season">
+        <table><tr><td class="label">Season:</td><td>{{json.Season}}</td></tr></table>              
+                </div>
+                <div class="td-content col-Time">
+        <table><tr><td class="label">Time:</td><td>{{json.TimeRange}}</td></tr></table>            
+                </div>
+
+        </div>
+</span>
+</script>
+
+<!-- vue root element -->
+<div id="app">
+<div id="container" >
+    <a id="map_link" class="Opacity06" href="http://vancouverisland.com/plan-your-trip/maps-of-bc/greater-victoria/">
+        <img src="baseline-map-24px.svg" alt="Area Map" width=48 height=48 >
+        <span id="map_link_text"><br>Area<br>Map</span>
+    </a>
+    <div id="Title">
+        <h1>Badminton Victoria</h1>
+        <h3>Where To Play Guide</h3>
+    </div>
+    <table-header></table-header>
+    <table-grid :json_list="data_list"></table-grid>
+    <p>
+    <center><h3>Last Updated {{data_update}}</h3></center>
+    
+</div>
+</div>
+
+<script src="index.js"></script>
+</body>
 </html>

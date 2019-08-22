@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(201, 224, 231);
+    font-family: 'Barlow', sans-serif;
+    padding: .1em;
+   }
+
+#Title {
+    padding: 1em;
+    text-align: center;
+}
+#logo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: -25px;
+}
+#map_link {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: .8em;
+  padding: .5em;
+}
+#map_link_text {
+  position: relative;
+  top: -8px;
+}
+ #container {
+   width: 100%;
+   padding: .5em;
+   padding-bottom: 2em;
+ }
+table {
+  border: 0px;
+}
+.table-div {
+    display: flex;
+}
+.label {
+  display: none;
+}
+.col-Day { flex: 1; flex-basis: 60px; }
+.col-Group { flex: 3; flex-basis: 100px; }
+.col-Area { flex: 1; flex-basis: 60px; }
+.col-Location { flex: 2; flex-basis: 60px; }
+.col-Level { flex: 1; flex-basis: 60px; }
+.col-Age { flex: 1; flex-basis: 60px; }
+.col-Shuttle { flex: 1; flex-basis: 60px; }
+.col-Time { flex: 2; flex-basis: 60px; }
+.col-Reservation { flex: 1; flex-basis: 60px; }
+.col-Season { flex: 1; flex-basis: 60px; }
+
+.td-header {
+    font-size: 1.3em;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #00b7ff;
+    border-color: lightskyblue;
+    padding: .1em;
+}
+.td-content {
+    border-style: solid;
+    border-width: 1px; 
+    border-color: #ccc;
+}
+
+.tr-content:nth-child(even) {
+    background-color: rgb(238, 235, 235);
+}
+.tr-content:nth-child(odd) {
+    background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+      padding: 0;
+    }
+    .label {
+      display: block;
+      width: 80px;
+      background-color: rgba(0, 0, 0, 0.25);
+      color: white;
+      margin-right: 5px;
+      font-size: .9em;
+    }
+    #container { padding: 0;
+        background-color: #00b7ff;
+    }
+    .table-div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col-Day { flex: 1 1 100%; }
+    .col-Group { flex: 1 1 100%; font-size: 1.4em; }
+    .col-Area { flex: 1 1 50%; }
+    .col-Location { flex: 1 1 50%; }
+    .col-Level { flex: 1 1 50%; }
+    .col-Age { flex: 1 1 50%; }
+    .col-Season { flex: 1 1 50%; }
+    .col-Reservation { flex: 1 1 50%; }
+    .col-Shuttle { flex: 1 1 50%; }
+    .col-Time { flex: 1 1 50%; }
+
+    
+    #Title {
+      text-align: center;
+      padding: 1em;
+    }
+    .tr-header { display: none; }
+    .NotHeader { display: none; }
+    .Header { 
+      font-size: 1.6em;
+      width: 100%;
+      background-color: rgb(201, 224, 231);
+      border-width: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    .label {
+      width: 82px;
+   }
+    .col-Day { flex: 1 1 100%; }
+    .col-Group { flex: 1 1 100%; }
+    .col-Area { display: none; }
+    .col-Location { flex: 1 1 100%; }
+    .col-Level { flex: 1 1 50%; }
+    .col-Age { flex: 1 1 50%; }
+    .col-Shuttle { flex: 1 1 50%; }
+    .col-Reservation { flex: 1 1 50%; }
+    .col-Time { flex: 1 1 100%; padding-bottom: 10px; }
+    .col-Season { display: none; }
+
+  }
+
+@media only screen and (max-width: 340px) {
+  #map_link {
+    top: 0px;
+    left: -5px;
+    padding: 0;
+  }
+  .td-header {
+    font-size: 1.1em;
+  }
+}
+
+.Opacity02 { zoom: 1; filter: alpha(opacity=20); opacity: 0.2; }
+.Opacity03 { zoom: 1; filter: alpha(opacity=30); opacity: 0.3; }
+.Opacity04 { zoom: 1; filter: alpha(opacity=40); opacity: 0.4; }
+.Opacity05 { zoom: 1; filter: alpha(opacity=50); opacity: 0.5; }
+.Opacity06 { zoom: 1; filter: alpha(opacity=60); opacity: 0.6; }
+.Opacity07 { zoom: 1; filter: alpha(opacity=70); opacity: 0.7; }
+.Opacity08 { zoom: 1; filter: alpha(opacity=80); opacity: 0.8; }
+.Opacity09 { zoom: 1; filter: alpha(opacity=90); opacity: 0.9; }
+.Opacity10 { opacity: 1.0; }
